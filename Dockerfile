@@ -16,4 +16,4 @@ RUN uv pip install --system ."[test,dev]"
 
 # Command to run the application
 # O host 0.0.0.0 é crucial para o Docker. A porta será lida da variável de ambiente pela aplicação.
-CMD ["uvicorn", "smartpurchase.main:app", "--host", "0.0.0.0"]
+CMD ["python", "-m", "smartpurchase.uvicorn_runner"]
